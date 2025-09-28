@@ -1,53 +1,186 @@
-/* this is the style sheet file for index.htlm  */
+/* this is the style sheet file for index.html  */
 
-/* 
-**Global Reset (`*`)**
-
-* Remove all default margin and padding.
-* Use `border-box` for sizing to include padding and border in element size.
-
-**Base (`html, body`)**
-
-* Set height to 100% for full viewport layout.
-* Use the `'Roboto'` sans-serif font for modern, clean typography.
-
-**Layout Wrapper (`.wrapper`)**
-
-* Use a vertical flexbox layout.
-* Ensure the wrapper covers at least the full height of the screen (`min-height: 100vh`).
-
-**Heading (`h2`)**
-
-* Set a large font size (`48px`) for prominence.
-* Add a bottom margin of `50px` for spacing.
-* Use a dark teal color (`#003e3e`).
-* Make the font bold and use a blended font stack (`'Alegreya', 'Roboto', sans-serif`) for elegant styling.
-
-**Main Section (`.main-content`)**
-
-* Allow the section to grow to fill space with `flex-grow: 1`.
-* Add `40px` of internal padding.
-* Center content both horizontally and vertically using `justify-content` and `align-items`.
-* Display items in a column direction.
-* Center all text.
-* Apply a full-screen background image with:
-
-  * `cover` size
-  * `center` positioning
-  * no repeat
-  * `fixed` attachment to keep image still during scroll
-
-**Buttons (`button`)**
-
-* Style with a teal green background (`#015c5d`) and white text.
-* Remove borders and round the corners (`12px`).
-* Use `10px 20px` padding and set width to `200px`.
-* Add a top margin of `10px` for spacing.
-* Enable pointer cursor and readable font size (`16px`).
-* On hover, change background color to bold red (`#A62B1F`).
-
-**Dashboard Buttons (`.dashboard-btn`)**
-
-* Use the same base green background (`#015c5d`) as the default button.
-* On hover, darken the background to deep teal (`#003e3e`) for visual feedback.
- */
+/* ================================
+   Global Reset
+   ================================ */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* ================================
+     Base Styles
+     ================================ */
+  html,
+  body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    color: #222;
+  }
+  
+  /* ================================
+     Wrapper Layout
+     ================================ */
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* ================================
+     Heading Styles
+     ================================ */
+  h2 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    color: #003e3e;
+    font-family: 'Alegreya', 'Roboto', sans-serif;
+    text-align: center;
+  }
+  
+  /* ================================
+     Main Section
+     ================================ */
+  .main-content {
+    flex-grow: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  /* ================================
+     Buttons
+     ================================ */
+  button {
+    background-color: #015c5d;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    width: 200px;
+    margin-top: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #a62b1f;
+  }
+  
+  /* Dashboard Buttons */
+  .dashboard-btn {
+    background-color: #015c5d;
+  }
+  
+  .dashboard-btn:hover {
+    background-color: #003e3e;
+  }
+  
+  /* ================================
+     Modal
+     ================================ */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 12px;
+    width: 400px;
+    max-width: 90%;
+    text-align: left;
+    position: relative;
+  }
+  
+  .close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: #a62b1f;
+  }
+  
+  /* ================================
+     Header & Footer Placeholders
+     ================================ */
+  #header,
+  #footer {
+    width: 100%;
+  }
+  
+  /* Footer styling */
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #015c5d;
+    color: #fff;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  
+  .footer p {
+    flex: 1;
+  }
+  
+  /* Header styling */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #015c5d;
+    color: #fff;
+  }
+  
+  .header .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .header nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+  
+  .header nav a:hover {
+    color: #a62b1f;
+  }
+  
