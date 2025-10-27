@@ -42,7 +42,7 @@ public class DoctorController {
   }
 
   // 4. Get all doctors
-  @GetMapping("/all")
+  @GetMapping
   public ResponseEntity<?> getDoctor() {
     List<Doctor> doctors = doctorService.getDoctors();
     return ResponseEntity.ok(Map.of("doctors", doctors));

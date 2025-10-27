@@ -18,7 +18,7 @@ import java.time.LocalTime;
 import java.util.List;
 import java.util.Optional;
 
-//@Service // 1. Spring-managed service component
+@org.springframework.stereotype.Service
 public class Service {
 
   public final TokenService tokenService;
