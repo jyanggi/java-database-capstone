@@ -7,14 +7,14 @@ public class Login {
 //    - Description:
 //      - Represents the email address used for logging into the system.
 //      - The email field is expected to contain a valid email address for user authentication purposes.
-
+private String identifier;
 // 2. 'password' field:
 //    - Type: private String
 //    - Description:
 //      - Represents the password associated with the email address.
 //      - The password field is used for verifying the user's identity during login.
 //      - It is generally hashed before being stored and compared during authentication.
-
+private String passowrd;
 // 3. Constructor:
 //    - No explicit constructor is defined for this class, as it relies on the default constructor provided by Java.
 //    - This class can be initialized with setters or directly via reflection, as per the application's needs.
@@ -27,4 +27,19 @@ public class Login {
 //    - The 'setPassword(String password)' method sets the password value.
 
 
+  public String getIdentifier() {
+    return identifier;
+  }
+
+  public void setIdentifier(String identifier) {
+    this.identifier = identifier;
+  }
+
+  public String getPassowrd() {
+    return passowrd;
+  }
+
+  public void setPassowrd(String passowrd) {
+    this.passowrd = passowrd;
+  }
 }
