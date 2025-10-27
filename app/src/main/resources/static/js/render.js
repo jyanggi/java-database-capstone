@@ -1,6 +1,6 @@
 // render.js
 
-function selectRole(role) {
+export function selectRole(role) {
   setRole(role);
   const token = localStorage.getItem('token');
   if (role === "admin") {
