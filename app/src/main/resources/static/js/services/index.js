@@ -15,9 +15,9 @@ const DOCTOR_API = API_BASE_URL + "/doctor/login";
 
 // Ensure buttons are ready after page load
 window.onload = function () {
-  const adminBtn = document.getElementById("adminLogin");
-  const doctorBtn = document.getElementById("doctorLogin");
-
+  const adminBtn = document.getElementById("adminBtn");
+  const doctorBtn = document.getElementById("doctorBtn");
+window.selectRole = selectRole;
   if (adminBtn) {
     adminBtn.addEventListener("click", () => {
       openModal("adminLogin");
