@@ -1,6 +1,6 @@
 // render.js
 
-export function selectRole(role) {
+function selectRole(role) {
   setRole(role);
   const token = localStorage.getItem('token');
   if (role === "admin") {
@@ -19,7 +19,7 @@ export function selectRole(role) {
 }
 
 
-export function renderContent() {
+function renderContent() {
   const role = getRole();
   if (!role) {
     window.location.href = "/"; // if no role, send to role selection page

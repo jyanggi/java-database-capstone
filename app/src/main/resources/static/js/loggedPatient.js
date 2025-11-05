@@ -105,11 +105,12 @@ function filterDoctorsOnChange() {
 
   filterDoctors(name, time, specialty)
     .then(response => {
+      console.log(response);
       const doctors = response.doctors;
       const contentDiv = document.getElementById("content");
       contentDiv.innerHTML = "";
 
-      if (doctors.length > 0) {
+      if (doctors?.length > 0) {
         console.log(doctors);
         doctors.forEach(doctor => {
           const card = createDoctorCard(doctor);
